@@ -17,9 +17,14 @@ jobs:
         with:
           node-version: '16'
 
+      - name: Add timestamp for cache busting
+        run: |
+          echo "DEPLOY_TIME=$(date)" >> $GITHUB_ENV
+
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@4.1.5
         with:
           branch: gh-pages
           folder: .
-          clean: true 
+          clean: true
+          commit-message: "Deploy: ${{ env.DEPLOY_TIME }}" 
