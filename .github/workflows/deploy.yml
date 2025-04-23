@@ -6,28 +6,32 @@ on:
       - main
 
 permissions:
-  contents: write
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
 
 jobs:
   deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
+      - name: Checkout
+        uses: actions/checkout@v4
 
-      - name: Setup Node
-        uses: actions/setup-node@v2
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
         with:
-          node-version: '16'
-
-      - name: Add timestamp for cache busting
-        run: |
-          echo "DEPLOY_TIME=$(date)" >> $GITHUB_ENV
+          path: '.'
 
       - name: Deploy to GitHub Pages
-        uses: JamesIves/github-pages-deploy-action@v4
-        with:
-          branch: gh-pages
-          folder: .
-          clean: true
-          commit-message: "Deploy: ${{ env.DEPLOY_TIME }}" 
+        id: deployment
+        uses: actions/deploy-pages@v4 
