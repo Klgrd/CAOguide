@@ -29,20 +29,8 @@ Ce guide de formation en ligne couvre les aspects essentiels de la CAO, structur
 
 ## Installation
 
-1. Clonez le dépôt :
-```bash
-git clone https://github.com/votre-username/guide-cao.git
-```
-
-2. Ouvrez le fichier `index.html` dans votre navigateur
-
-## Développement
-
-Pour contribuer au projet :
-
-1. Créez une branche pour votre fonctionnalité
-2. Committez vos changements
-3. Ouvrez une Pull Request
+1. Clonez le dépôt
+2. Ouvrez `index.html` dans votre navigateur
 
 ## Structure du projet
 
@@ -58,4 +46,4 @@ guide-cao/
 
 ## Licence
 
-Ce projet est la propriété de SNCF. Tous droits réservés. 
+© 2024 SNCF - Tous droits réservés 
