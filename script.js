@@ -127,4 +127,45 @@ document.addEventListener('DOMContentLoaded', function() {
         
         imgObserver.observe(img);
     });
+
+    // Animation du diagramme d'étapes
+    const stepItems = document.querySelectorAll('.step-item');
+    
+    stepItems.forEach((item, index) => {
+        item.style.opacity = '0';
+        item.style.transform = 'translateY(20px)';
+        
+        const stepObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    setTimeout(() => {
+                        item.style.opacity = '1';
+                        item.style.transform = 'translateY(0)';
+                    }, index * 200);
+                    stepObserver.unobserve(item);
+                }
+            });
+        }, { threshold: 0.5 });
+        
+        stepObserver.observe(item);
+    });
+
+    // Effet de survol amélioré pour les étapes
+    stepItems.forEach(item => {
+        item.addEventListener('mouseenter', () => {
+            stepItems.forEach(otherItem => {
+                if (otherItem !== item) {
+                    otherItem.style.opacity = '0.7';
+                    otherItem.style.transform = 'scale(0.95)';
+                }
+            });
+        });
+
+        item.addEventListener('mouseleave', () => {
+            stepItems.forEach(otherItem => {
+                otherItem.style.opacity = '1';
+                otherItem.style.transform = 'scale(1)';
+            });
+        });
+    });
 }); 
