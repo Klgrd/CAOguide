@@ -1,40 +1,49 @@
-# Guide de Conception Industrielle
+# Guide CAO - SNCF
 
-Ce site web est un guide interactif pour la conception industrielle, présentant les outils essentiels comme la Bête à Corne, la Pieuvre et le Diagramme de Pareto.
+Guide interactif de formation à la Conception Assistée par Ordinateur (CAO).
 
-## Structure du Site
+## Description
 
-- `index.html` - Page principale du site
-- `styles.css` - Styles et mise en page
-- `script.js` - Interactions et animations
-- `images/` - Dossier contenant les illustrations et exemples
-- `.github/workflows/` - Configuration du déploiement automatique
+Ce guide de formation en ligne couvre les aspects essentiels de la CAO, structuré en plusieurs chapitres :
 
-## Déploiement Automatique sur GitHub Pages
+1. Introduction à la CAO
+2. Méthodologie de Conception
+3. Outils et Logiciels
+4. Bonnes Pratiques
+5. Applications Industrielles
 
-1. Créez un compte GitHub si vous n'en avez pas déjà un
-2. Créez un nouveau repository
-3. Uploadez tous les fichiers de ce projet dans le repository
-4. Allez dans les paramètres du repository
-5. Dans la section "Pages", sélectionnez la branche `gh-pages` comme source
-6. Le site sera automatiquement déployé à chaque push sur la branche principale
+## Fonctionnalités
 
-### Comment ça marche ?
+- Navigation interactive entre les chapitres
+- Suivi de la progression
+- Contenu multimédia et interactif
+- Design responsive
+- Interface utilisateur moderne
 
-- Le workflow GitHub Actions (`.github/workflows/deploy.yml`) est configuré pour se déclencher à chaque push sur la branche principale
-- Il déploie automatiquement le site sur la branche `gh-pages`
-- Le site sera disponible à l'adresse : `https://[votre-nom-utilisateur].github.io/[nom-du-repo]`
-
-## Personnalisation
-
-Pour ajouter vos propres images :
-1. Placez vos images dans le dossier `images/`
-2. Mettez à jour les chemins dans `index.html` pour pointer vers vos nouvelles images
-3. Committez et poussez les changements - le site sera automatiquement mis à jour
-
-## Technologies Utilisées
+## Technologies utilisées
 
 - HTML5
-- CSS3
-- JavaScript
-- Bootstrap 5 
+- CSS3 (avec variables CSS et animations)
+- JavaScript (Vanilla)
+- Font Awesome pour les icônes
+
+## Installation
+
+1. Clonez le dépôt
+2. Ouvrez `index.html` dans votre navigateur
+
+## Structure du projet
+
+```
+guide-cao/
+├── index.html
+├── styles.css
+├── script.js
+├── images/
+│   └── sncf-4.svg
+└── README.md
+```
+
+## Licence
+
+© 2024 SNCF - Tous droits réservés 

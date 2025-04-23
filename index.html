@@ -3,164 +3,131 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Guide de Conception Industrielle - SNCF</title>
+    <title>Guide de Conception Industrielle</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg">
-        <div class="container">
-            <a class="navbar-brand" href="#">
-                <i class="fas fa-train me-2"></i>Guide CAO
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#bete-a-corne">
-                            <i class="fas fa-project-diagram me-1"></i>Bête à Corne
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#pieuvre">
-                            <i class="fas fa-sitemap me-1"></i>Pieuvre
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#pareto">
-                            <i class="fas fa-chart-bar me-1"></i>Pareto
-                        </a>
-                    </li>
-                </ul>
-            </div>
+    <nav class="sidebar">
+        <div class="sidebar-header">
+            <img src="images/sncf-4.svg" alt="SNCF Logo" class="logo">
+            <h2>Guide CAO</h2>
         </div>
+        
+        <div class="progress-container">
+            <div class="progress-bar">
+                <div class="progress" style="width: 0%"></div>
+            </div>
+            <span class="progress-text">0% Complété</span>
+        </div>
+
+        <ul class="chapters-list">
+            <li class="chapter active" data-chapter="introduction">
+                <span class="chapter-number">01</span>
+                <span class="chapter-title">Introduction à la CAO</span>
+                <div class="chapter-progress"></div>
+            </li>
+            <li class="chapter" data-chapter="methodologie">
+                <span class="chapter-number">02</span>
+                <span class="chapter-title">Méthodologie de Conception</span>
+                <div class="chapter-progress"></div>
+            </li>
+            <li class="chapter" data-chapter="outils">
+                <span class="chapter-number">03</span>
+                <span class="chapter-title">Outils et Logiciels</span>
+                <div class="chapter-progress"></div>
+            </li>
+            <li class="chapter" data-chapter="bonnes-pratiques">
+                <span class="chapter-number">04</span>
+                <span class="chapter-title">Bonnes Pratiques</span>
+                <div class="chapter-progress"></div>
+            </li>
+            <li class="chapter" data-chapter="applications">
+                <span class="chapter-number">05</span>
+                <span class="chapter-title">Applications Industrielles</span>
+                <div class="chapter-progress"></div>
+            </li>
+        </ul>
     </nav>
 
-    <div class="container mt-5">
-        <h1 class="text-center mb-5">Guide de Conception Industrielle</h1>
+    <main class="content">
+        <div class="reading-progress-bar"></div>
         
-        <!-- Nouveau diagramme d'étapes -->
-        <section id="process" class="mb-5">
-            <div class="section-header">
-                <h2><i class="fas fa-tasks me-2"></i>Processus de Conception</h2>
-            </div>
-            <div class="steps-diagram">
-                <div class="step-item">
-                    <div class="step-number">1</div>
-                    <div class="step-title">Analyse du Besoin</div>
-                    <div class="step-content">Utilisation de la Bête à Corne pour définir le besoin fondamental</div>
-                </div>
-                <div class="step-item">
-                    <div class="step-number">2</div>
-                    <div class="step-title">Analyse Fonctionnelle</div>
-                    <div class="step-content">Application de la méthode APTE avec le diagramme Pieuvre</div>
-                </div>
-                <div class="step-item">
-                    <div class="step-number">3</div>
-                    <div class="step-title">Analyse des Causes</div>
-                    <div class="step-content">Utilisation du diagramme de Pareto pour identifier les priorités</div>
-                </div>
-                <div class="step-item">
-                    <div class="step-number">4</div>
-                    <div class="step-title">Solutions</div>
-                    <div class="step-content">Développement et évaluation des solutions techniques</div>
-                </div>
-                <div class="step-item">
-                    <div class="step-number">5</div>
-                    <div class="step-title">Validation</div>
-                    <div class="step-content">Tests et validation de la solution retenue</div>
+        <div class="chapter-content" id="introduction">
+            <div class="chapter-header">
+                <h1>Introduction à la CAO</h1>
+                <div class="estimated-time">
+                    <i class="fas fa-clock"></i>
+                    <span>Temps de lecture estimé: 15 minutes</span>
                 </div>
             </div>
-        </section>
 
-        <section id="bete-a-corne" class="mb-5">
-            <div class="section-header">
-                <h2><i class="fas fa-project-diagram me-2"></i>La Bête à Corne</h2>
+            <div class="learning-objectives">
+                <h2>Objectifs d'apprentissage</h2>
+                <ul>
+                    <li>Comprendre les fondamentaux de la CAO</li>
+                    <li>Identifier les avantages de la conception assistée par ordinateur</li>
+                    <li>Connaître les différents domaines d'application</li>
+                </ul>
             </div>
-            <div class="row">
-                <div class="col-md-6">
-                    <h3>Comment faire une Bête à Corne</h3>
-                    <p class="lead mb-4">La bête à corne est un outil d'analyse fonctionnelle qui permet de définir le besoin d'un produit ou d'un service de manière structurée et visuelle.</p>
-                    <ol class="steps-list">
-                        <li>Identifier le produit ou service à analyser</li>
-                        <li>Définir les utilisateurs principaux et secondaires</li>
-                        <li>Identifier les besoins fondamentaux</li>
-                        <li>Établir les relations entre ces éléments</li>
-                    </ol>
-                </div>
-                <div class="col-md-6">
-                    <div class="example-box">
-                        <h4><i class="fas fa-lightbulb me-2"></i>Exemple de Bête à Corne</h4>
-                        <img src="images/bete-a-corne-example.png" alt="Exemple de Bête à Corne" class="img-fluid">
+
+            <section class="lesson-section">
+                <h2>Qu'est-ce que la CAO ?</h2>
+                <p>La Conception Assistée par Ordinateur (CAO) est un ensemble d'outils et de techniques permettant de créer, modifier et optimiser un design à l'aide d'un ordinateur. Elle représente une évolution majeure dans le domaine de la conception industrielle, remplaçant progressivement les méthodes traditionnelles de dessin manuel.</p>
+                
+                <div class="info-box">
+                    <i class="fas fa-info-circle info-icon"></i>
+                    <div>
+                        <strong>Point clé :</strong> La CAO permet non seulement de dessiner des objets en 3D, mais aussi de simuler leur comportement mécanique, thermique ou aérodynamique.
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <section id="pieuvre" class="mb-5">
-            <div class="section-header">
-                <h2><i class="fas fa-sitemap me-2"></i>La Pieuvre</h2>
-            </div>
-            <div class="row">
-                <div class="col-md-6">
-                    <h3>Comment faire une Pieuvre</h3>
-                    <p class="lead mb-4">La pieuvre est un diagramme qui permet d'identifier et de visualiser les fonctions principales et les contraintes d'un produit dans son environnement.</p>
-                    <ol class="steps-list">
-                        <li>Identifier le produit central et son environnement</li>
-                        <li>Lister les fonctions principales et leurs interactions</li>
-                        <li>Identifier les contraintes techniques et fonctionnelles</li>
-                        <li>Établir les relations entre les éléments</li>
-                    </ol>
-                </div>
-                <div class="col-md-6">
-                    <div class="example-box">
-                        <h4><i class="fas fa-lightbulb me-2"></i>Exemple de Pieuvre</h4>
-                        <img src="images/pieuvre-example.png" alt="Exemple de Pieuvre" class="img-fluid">
+            <section class="lesson-section">
+                <h2>Évolution Historique</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-date">1960s</div>
+                        <div class="timeline-content">
+                            <h3>Les débuts</h3>
+                            <p>Premiers systèmes CAO développés par Ivan Sutherland au MIT</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">1970s</div>
+                        <div class="timeline-content">
+                            <h3>Industrialisation</h3>
+                            <p>Adoption par les grandes industries aéronautique et automobile</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">1980s</div>
+                        <div class="timeline-content">
+                            <h3>Démocratisation</h3>
+                            <p>Arrivée des PC et des logiciels CAO grand public</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">Aujourd'hui</div>
+                        <div class="timeline-content">
+                            <h3>Ère du Cloud</h3>
+                            <p>CAO collaborative et outils de simulation avancés</p>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <section id="pareto" class="mb-5">
-            <div class="section-header">
-                <h2><i class="fas fa-chart-bar me-2"></i>Le Diagramme de Pareto</h2>
+            <div class="chapter-navigation">
+                <button class="nav-btn prev" disabled>
+                    <i class="fas fa-arrow-left"></i> Précédent
+                </button>
+                <button class="nav-btn next">
+                    Suivant <i class="fas fa-arrow-right"></i>
+                </button>
             </div>
-            <div class="row">
-                <div class="col-md-6">
-                    <h3>Comment faire un Pareto</h3>
-                    <p class="lead mb-4">Le diagramme de Pareto est un outil statistique qui permet d'identifier et de prioriser les causes les plus importantes d'un problème.</p>
-                    <ol class="steps-list">
-                        <li>Collecter et organiser les données pertinentes</li>
-                        <li>Trier les données par ordre décroissant d'importance</li>
-                        <li>Calculer les pourcentages cumulés pour chaque catégorie</li>
-                        <li>Représenter graphiquement les résultats</li>
-                    </ol>
-                </div>
-                <div class="col-md-6">
-                    <div class="example-box">
-                        <h4><i class="fas fa-lightbulb me-2"></i>Exemple de Pareto</h4>
-                        <img src="images/pareto-example.png" alt="Exemple de Pareto" class="img-fluid">
-                    </div>
-                </div>
-            </div>
-        </section>
-    </div>
-
-    <button id="back-to-top" class="btn" title="Retour en haut">
-        <i class="fas fa-arrow-up"></i>
-    </button>
-
-    <footer class="text-center py-4">
-        <div class="container">
-            <p class="mb-0">Guide de Conception Industrielle - SNCF © 2024</p>
-            <p class="small mt-2">Développé avec <i class="fas fa-heart text-danger"></i> pour la SNCF</p>
         </div>
-    </footer>
+    </main>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html> 
