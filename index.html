@@ -3,28 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Guide de Conception Industrielle</title>
+    <title>Guide de Conception Industrielle - SNCF</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg">
         <div class="container">
-            <a class="navbar-brand" href="#">Guide CAO</a>
+            <a class="navbar-brand" href="#">
+                <i class="fas fa-train me-2"></i>Guide CAO
+            </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
+                <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="#bete-a-corne">Bête à Corne</a>
+                        <a class="nav-link" href="#bete-a-corne">
+                            <i class="fas fa-project-diagram me-1"></i>Bête à Corne
+                        </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#pieuvre">Pieuvre</a>
+                        <a class="nav-link" href="#pieuvre">
+                            <i class="fas fa-sitemap me-1"></i>Pieuvre
+                        </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#pareto">Pareto</a>
+                        <a class="nav-link" href="#pareto">
+                            <i class="fas fa-chart-bar me-1"></i>Pareto
+                        </a>
                     </li>
                 </ul>
             </div>
@@ -35,21 +43,23 @@
         <h1 class="text-center mb-5">Guide de Conception Industrielle</h1>
         
         <section id="bete-a-corne" class="mb-5">
-            <h2>La Bête à Corne</h2>
+            <div class="section-header">
+                <h2><i class="fas fa-project-diagram me-2"></i>La Bête à Corne</h2>
+            </div>
             <div class="row">
                 <div class="col-md-6">
                     <h3>Comment faire une Bête à Corne</h3>
-                    <p>La bête à corne est un outil d'analyse fonctionnelle qui permet de définir le besoin d'un produit ou d'un service.</p>
-                    <ol>
-                        <li>Identifier le produit ou service</li>
-                        <li>Définir les utilisateurs</li>
-                        <li>Identifier les besoins</li>
+                    <p class="lead mb-4">La bête à corne est un outil d'analyse fonctionnelle qui permet de définir le besoin d'un produit ou d'un service de manière structurée et visuelle.</p>
+                    <ol class="steps-list">
+                        <li>Identifier le produit ou service à analyser</li>
+                        <li>Définir les utilisateurs principaux et secondaires</li>
+                        <li>Identifier les besoins fondamentaux</li>
                         <li>Établir les relations entre ces éléments</li>
                     </ol>
                 </div>
                 <div class="col-md-6">
                     <div class="example-box">
-                        <h4>Exemple de Bête à Corne</h4>
+                        <h4><i class="fas fa-lightbulb me-2"></i>Exemple de Bête à Corne</h4>
                         <img src="images/bete-a-corne-example.png" alt="Exemple de Bête à Corne" class="img-fluid">
                     </div>
                 </div>
@@ -57,21 +67,23 @@
         </section>
 
         <section id="pieuvre" class="mb-5">
-            <h2>La Pieuvre</h2>
+            <div class="section-header">
+                <h2><i class="fas fa-sitemap me-2"></i>La Pieuvre</h2>
+            </div>
             <div class="row">
                 <div class="col-md-6">
                     <h3>Comment faire une Pieuvre</h3>
-                    <p>La pieuvre est un diagramme qui permet d'identifier les fonctions principales et les contraintes d'un produit.</p>
-                    <ol>
-                        <li>Identifier le produit central</li>
-                        <li>Lister les fonctions principales</li>
-                        <li>Identifier les contraintes</li>
-                        <li>Établir les relations</li>
+                    <p class="lead mb-4">La pieuvre est un diagramme qui permet d'identifier et de visualiser les fonctions principales et les contraintes d'un produit dans son environnement.</p>
+                    <ol class="steps-list">
+                        <li>Identifier le produit central et son environnement</li>
+                        <li>Lister les fonctions principales et leurs interactions</li>
+                        <li>Identifier les contraintes techniques et fonctionnelles</li>
+                        <li>Établir les relations entre les éléments</li>
                     </ol>
                 </div>
                 <div class="col-md-6">
                     <div class="example-box">
-                        <h4>Exemple de Pieuvre</h4>
+                        <h4><i class="fas fa-lightbulb me-2"></i>Exemple de Pieuvre</h4>
                         <img src="images/pieuvre-example.png" alt="Exemple de Pieuvre" class="img-fluid">
                     </div>
                 </div>
@@ -79,21 +91,23 @@
         </section>
 
         <section id="pareto" class="mb-5">
-            <h2>Le Diagramme de Pareto</h2>
+            <div class="section-header">
+                <h2><i class="fas fa-chart-bar me-2"></i>Le Diagramme de Pareto</h2>
+            </div>
             <div class="row">
                 <div class="col-md-6">
                     <h3>Comment faire un Pareto</h3>
-                    <p>Le diagramme de Pareto est un outil qui permet d'identifier les causes les plus importantes d'un problème.</p>
-                    <ol>
-                        <li>Collecter les données</li>
-                        <li>Trier les données par ordre décroissant</li>
-                        <li>Calculer les pourcentages cumulés</li>
-                        <li>Représenter graphiquement</li>
+                    <p class="lead mb-4">Le diagramme de Pareto est un outil statistique qui permet d'identifier et de prioriser les causes les plus importantes d'un problème.</p>
+                    <ol class="steps-list">
+                        <li>Collecter et organiser les données pertinentes</li>
+                        <li>Trier les données par ordre décroissant d'importance</li>
+                        <li>Calculer les pourcentages cumulés pour chaque catégorie</li>
+                        <li>Représenter graphiquement les résultats</li>
                     </ol>
                 </div>
                 <div class="col-md-6">
                     <div class="example-box">
-                        <h4>Exemple de Pareto</h4>
+                        <h4><i class="fas fa-lightbulb me-2"></i>Exemple de Pareto</h4>
                         <img src="images/pareto-example.png" alt="Exemple de Pareto" class="img-fluid">
                     </div>
                 </div>
@@ -101,12 +115,15 @@
         </section>
     </div>
 
-    <button id="back-to-top" class="btn btn-primary" title="Retour en haut">
+    <button id="back-to-top" class="btn" title="Retour en haut">
         <i class="fas fa-arrow-up"></i>
     </button>
 
-    <footer class="bg-dark text-white text-center py-3 mt-5">
-        <p>Guide de Conception Industrielle - © 2024</p>
+    <footer class="text-center py-4">
+        <div class="container">
+            <p class="mb-0">Guide de Conception Industrielle - SNCF © 2024</p>
+            <p class="small mt-2">Développé avec <i class="fas fa-heart text-danger"></i> pour la SNCF</p>
+        </div>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>

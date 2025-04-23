@@ -1,93 +1,132 @@
 :root {
-    --primary-color: #2c3e50;
-    --secondary-color: #3498db;
-    --accent-color: #e74c3c;
-    --text-color: #333;
-    --light-bg: #f8f9fa;
+    --sncf-blue: #0F1941;
+    --sncf-light-blue: #1B2B57;
+    --sncf-red: #C31E34;
+    --sncf-gray: #4F5464;
+    --sncf-light-gray: #F7F7F7;
+    --text-color: #333333;
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Avenir Next', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: var(--text-color);
     line-height: 1.6;
+    background-color: var(--sncf-light-gray);
 }
 
 .navbar {
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    background-color: var(--sncf-blue) !important;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    padding: 1rem 0;
 }
 
 .navbar-brand {
     font-weight: bold;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
+    color: white !important;
+}
+
+.nav-link {
+    color: white !important;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: var(--sncf-red) !important;
 }
 
 h1, h2, h3, h4 {
-    color: var(--primary-color);
-    margin-bottom: 1rem;
+    color: var(--sncf-blue);
+    margin-bottom: 1.5rem;
+    font-weight: 600;
 }
 
 h1 {
-    font-size: 2.5rem;
+    font-size: 2.8rem;
     font-weight: bold;
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+h1:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 4px;
+    background-color: var(--sncf-red);
 }
 
 h2 {
-    font-size: 2rem;
-    border-bottom: 2px solid var(--secondary-color);
-    padding-bottom: 0.5rem;
+    font-size: 2.2rem;
+    border-bottom: 3px solid var(--sncf-red);
+    padding-bottom: 0.8rem;
+    margin-top: 2rem;
 }
 
 h3 {
-    font-size: 1.5rem;
-    color: var(--secondary-color);
+    font-size: 1.6rem;
+    color: var(--sncf-light-blue);
 }
 
 .example-box {
-    background-color: var(--light-bg);
-    border-radius: 8px;
-    padding: 1.5rem;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    margin-bottom: 1rem;
+    background-color: white;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 4px 12px rgba(15, 25, 65, 0.1);
+    margin-bottom: 2rem;
+    border: 1px solid rgba(15, 25, 65, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.example-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 16px rgba(15, 25, 65, 0.15);
 }
 
 .example-box img {
-    border-radius: 4px;
+    border-radius: 8px;
     margin-top: 1rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
 section {
-    padding: 2rem 0;
+    padding: 3rem 0;
+    background-color: white;
+    margin-bottom: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(15, 25, 65, 0.05);
 }
 
 ol {
     padding-left: 1.5rem;
+    counter-reset: item;
 }
 
 ol li {
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
+    position: relative;
+    padding-left: 1rem;
+    list-style: none;
+}
+
+ol li:before {
+    content: counter(item) ".";
+    counter-increment: item;
+    color: var(--sncf-red);
+    font-weight: bold;
+    position: absolute;
+    left: -1.5rem;
 }
 
 footer {
-    margin-top: 3rem;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    h1 {
-        font-size: 2rem;
-    }
-    
-    h2 {
-        font-size: 1.75rem;
-    }
-    
-    h3 {
-        font-size: 1.25rem;
-    }
-    
-    .example-box {
-        margin-top: 1rem;
-    }
+    background-color: var(--sncf-blue);
+    color: white;
+    padding: 2rem 0;
+    margin-top: 4rem;
 }
 
 #back-to-top {
@@ -98,19 +137,50 @@ footer {
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    background-color: var(--secondary-color);
+    background-color: var(--sncf-red);
     color: white;
     border: none;
     box-shadow: 0 2px 10px rgba(0,0,0,0.2);
     z-index: 1000;
+    transition: all 0.3s ease;
 }
 
 #back-to-top:hover {
-    background-color: var(--primary-color);
+    background-color: var(--sncf-blue);
     transform: translateY(-2px);
-    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
 }
 
 #back-to-top i {
     line-height: 1;
+    font-size: 1.2rem;
+}
+
+.container {
+    max-width: 1200px;
+    padding: 0 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.2rem;
+    }
+    
+    h2 {
+        font-size: 1.8rem;
+    }
+    
+    h3 {
+        font-size: 1.4rem;
+    }
+    
+    .example-box {
+        margin-top: 1rem;
+        padding: 1.5rem;
+    }
+
+    section {
+        padding: 2rem 1rem;
+    }
 } 
